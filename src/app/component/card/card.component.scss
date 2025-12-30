@@ -1,0 +1,29 @@
+@import "../../../style/color.scss";
+@import "../../../style/mixin.scss";
+
+.card-container {
+  margin-top: 8px;
+  display: grid;
+  gap: 8px;
+  border-radius: 8px;
+  @include box-shadow;
+  .header {
+    color: white;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+    padding: 8px;
+    background: $teal;
+    align-items: center;
+    .title {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px;
+      align-items: center;
+    }
+  }
+  .body,
+  .footer {
+    padding: 8px;
+  }
+}

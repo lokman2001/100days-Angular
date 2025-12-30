@@ -1,0 +1,32 @@
+@import "../../../style/color.scss";
+button {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid;
+  margin: 4px;
+  &.light-blue {
+    background: $lightblue;
+    color: $white;
+    border-color: $lightblue;
+  }
+  &.rosyred {
+    background: $rosyred;
+    color: $white;
+    border-color: $rosyred;
+  }
+  &.red {
+    background: $red;
+    color: $white;
+    border-color: $red;
+  }
+  &.teal {
+    background: $teal;
+    color: $white;
+    border-color: $teal;
+  }
+  &.silver {
+    background: $silver;
+    color: $black;
+    border-color: $silver;
+  }
+}

@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { PipesPageComponent } from './template/pipes-page/pipes-page.component';
+import { DirectivesPageComponent } from './template/directives-page/directives-page.component';
+import { ServicesPageComponent } from './template/services-page/services-page.component';
+import { OtherPageComponent } from './template/other-page/other-page.component';
+import { ComponentPageComponent } from './template/component-page/component-page.component';
+const routes: Routes = [
+  { path: '', redirectTo: 'components', pathMatch: 'full' },
+  { path: 'components', component: ComponentPageComponent },
+  { path: 'pipes', component: PipesPageComponent },
+  { path: 'directives', component: DirectivesPageComponent },
+  { path: 'services', component: ServicesPageComponent },
+  { path: 'other', component: OtherPageComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

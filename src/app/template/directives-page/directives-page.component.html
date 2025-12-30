@@ -1,0 +1,14 @@
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Debounce Click" subtitle="directive">
+
+    <div body>
+        <p>
+            {{ debounceClickEvent }}
+        </p>
+        <app-button appDebounceClick (debounceClick)="log()" color="light-blue" text="click me"
+            [icon]="faInfo"></app-button>
+        <app-button color="light-blue" text="reset" appDebounceClick (debounceClick)="reset()"
+            [icon]="faInfo"></app-button>
+    </div>
+
+
+</app-card>

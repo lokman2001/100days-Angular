@@ -1,0 +1,26 @@
+@import "../../../style/color.scss";
+
+.progress-container {
+  position: relative;
+  small {
+    transform: translateY(-50%);
+    right: 50%;
+    top: 50%;
+    position: absolute;
+    color: $white;
+  }
+  progress {
+    height: 20px;
+    width: 100%;
+    background: $white;
+    transition: all 3s;
+  }
+  progress[value]::-webkit-progress-value {
+    background-color: $lightblue;
+    transition: all 3s;
+  }
+  progress[value]::-webkit-progress-value,
+  progress[value]::-webkit-progress-bar {
+    border-radius: 10px;
+  }
+}
