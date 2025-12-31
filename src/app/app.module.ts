@@ -22,6 +22,12 @@ import { CreditCardFormaterPipe } from './pipes/credit-card-formater.pipe';
 import { FilterTermPipe } from './pipes/filter-term.pipe';
 import { FlattenPipe } from './pipes/flatten.pipe';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { ToggleComponent } from './component/toggle/toggle.component';
+import { DebounceSearchComponent } from './component/debounce-search/debounce-search.component';
+import { FormsModule } from '@angular/forms';
+import { SearchListComponent } from './component/search-list/search-list.component';
+import { CounterComponent } from './component/counter/counter.component';
+import { RippleDirective } from './directive/ripple.directive';
 
 @NgModule({
   declarations: [
@@ -43,12 +49,18 @@ import { TruncatePipe } from './pipes/truncate.pipe';
     CreditCardFormaterPipe,
     FilterTermPipe,
     FlattenPipe,
-    TruncatePipe
+    TruncatePipe,
+    ToggleComponent,
+    DebounceSearchComponent,
+    SearchListComponent,
+    CounterComponent,
+    RippleDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

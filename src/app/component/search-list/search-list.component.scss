@@ -1,0 +1,23 @@
+@import "../../../style/color.scss";
+
+.search-list {
+    width: fit-content;
+    position: relative;
+  .list-wrapper {
+    background: $white;
+    position: absolute;
+    border: 1px solid $silver;
+    li {
+      padding: 0px 12px;
+      list-style: none;
+      cursor: pointer;
+
+      &:hover {
+        background: $silver;
+      }
+    }
+    &.is-selected {
+      display: none;
+    }
+  }
+}

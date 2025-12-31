@@ -33,3 +33,24 @@
         <app-button color="light-blue" text="button 2" [icon]="faInfo"></app-button>
     </div>
 </app-card>
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Toggle" subtitle="Component">
+    <div body>
+        <app-toggle></app-toggle>
+        <app-toggle></app-toggle>
+    </div>
+</app-card>
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Debounce Search" subtitle="Component">
+    <div body>
+        <app-debounce-search [searchKeyDisplay]="searchKeyDisplay" placeHolder="Search" (searchUpdate)="debounceSearch($event)" [updateSearchValue]="updateSearchValue"></app-debounce-search>
+    </div>
+</app-card>
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Search List" subtitle="Component">
+    <div body>
+        <app-search-list [items]="countries" ></app-search-list>
+    </div>
+</app-card>
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Search List" subtitle="Component">
+    <div body>
+        <app-counter></app-counter>
+    </div>
+</app-card>

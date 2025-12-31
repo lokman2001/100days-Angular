@@ -1,0 +1,5 @@
+<div class="counter">
+    <button><fa-icon [icon]="minusIcon" (click)="minus()"></fa-icon></button>
+    <input type="number" readonly [value]="counterValue" [min]="min" [max]="max">
+    <button><fa-icon [icon]="plusIcon" (click)="plus()"></fa-icon></button>
+</div>

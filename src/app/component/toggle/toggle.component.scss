@@ -1,0 +1,29 @@
+@import "../../../style/color.scss";
+
+.toggle-container{
+    margin: 2px;
+    display: inline-block;
+    background: $lightblue;
+    border: 1px solid $silver;
+    border-radius: 20px;
+    height: 20px;
+    width: 40px;
+    padding: 1px;
+    transition: all 0.5s ease;
+    &.is-off{
+        background: $silver;
+    }
+
+    .toggle{
+        float: right;
+        background: $white;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        transition: all 0.3s ease;
+        &.is-off{
+            float: left;
+            background: $white;
+        }
+    }
+}

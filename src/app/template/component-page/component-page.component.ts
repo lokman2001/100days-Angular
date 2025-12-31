@@ -10,6 +10,19 @@ import { Accordion } from 'src/app/interface/accordion';
 export class ComponentPageComponent {
   public faInfo = faInfoCircle;
   public cardIconEnable = true;
+  public updateSearchValue = '';
+  public searchKeyDisplay = true ;
+  public debounceSearch(value:string){
+    this.updateSearchValue = value
+  }
+
+  public countries = [
+  'Myanmar',
+  'Thailand',
+  'Singapore',
+  'Japan',
+  'United States'
+];
 
   public items: Accordion[] = [
     {

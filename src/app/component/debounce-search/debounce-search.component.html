@@ -1,0 +1,6 @@
+<div class="input-wrapper">
+  <input type="search" [placeholder]="placeHolder" [(ngModel)]="searchTerm" (ngModelChange)="updateSearchTerm($event)">
+  <p *ngIf="searchKeyDisplay">
+    Search : {{ updateSearchValue }}
+  </p>
+</div>
