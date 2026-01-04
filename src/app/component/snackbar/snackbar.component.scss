@@ -1,0 +1,36 @@
+@import "../../../style/color.scss";
+
+.snackbar-container {
+  background: $black;
+  color: $white;
+  padding: 0 10px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  visibility: hidden;
+  @keyframes fadeup {
+    from {
+      opacity: 0;
+      bottom: 0;
+    }
+    to {
+      opacity: 1;
+      bottom: 30px;
+    }
+  }
+  @keyframes fadedown {
+    from {
+      opacity: 1;
+      bottom: 30px;
+    }
+    to {
+      opacity: 0;
+      bottom: 0;
+    }
+  }
+  &.show {
+    visibility: visible;
+    animation: fadeup 0.5s, fadedown 0.5s 2.5s;
+  }
+}

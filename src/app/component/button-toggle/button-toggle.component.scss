@@ -1,0 +1,25 @@
+@import "../../../style/color.scss";
+
+.button-toggle-container {
+  display: inline-block;
+  border-radius: 8px;
+  border: 1px solid $lightblue;
+  padding: 4px 0;
+  .button-toggle {
+    border-radius: 8px;
+    display: inline-block;
+    margin: 0 4px;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: $white;
+    &:hover {
+      background: $lightblue;
+      color: $white;
+    }
+    &.is-active {
+      background: $lightblue;
+      color: $white;
+    }
+  }
+}

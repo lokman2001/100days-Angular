@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { SnackbarComponent } from './../../component/snackbar/snackbar.component';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { RibbonLocation } from 'src/app/component/ribbon/ribbon.location.enum';
 import { RibbonType } from 'src/app/component/ribbon/ribbon.type';
 import { Accordion } from 'src/app/interface/accordion';
 import { Tab } from 'src/app/interface/tab';
 import { UserData } from 'src/app/interface/user-data';
+import { ButtonMeta } from 'src/app/model/button-meta.model';
 import { TabsService } from 'src/app/service/tabs.service';
 import { UserDataService } from 'src/app/service/user-data.service';
 
@@ -23,6 +25,22 @@ export class ComponentPageComponent {
   public currentPagingPage = 1;
   public tabs!: Tab[];
   public currentTab = 0;
+  @ViewChild('snackbar') public snackbar!: SnackbarComponent;
+  public showSnackbar() {
+    this.snackbar.show();
+  }
+
+  public buttonOptions: ButtonMeta[] = [
+    { id: 'btn1', title: 'Option 1', isActive: true },
+    { id: 'btn2', title: 'Option 2', isActive: false },
+    { id: 'btn3', title: 'Option 3', isActive: false },
+  ];
+  public onButtonToggleSelection(selectedOption: any) {
+    this.buttonOptions.forEach((option) => {
+      option.isActive = false;
+      option.isActive = option.id === selectedOption.id;
+    });
+  }
 
   public changePagingPage(page: number) {
     this.currentPagingPage = page;

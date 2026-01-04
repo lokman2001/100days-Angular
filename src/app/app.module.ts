@@ -34,6 +34,9 @@ import { TabComponent } from './component/tab/tab.component';
 import { SortTableComponent } from './component/sort-table/sort-table.component';
 import { ReactiveFormComponent } from './component/reactive-form/reactive-form.component';
 import { RibbonComponent } from './component/ribbon/ribbon.component';
+import { ButtonToggleComponent } from './component/button-toggle/button-toggle.component';
+import { BannerCutoutComponent } from './component/banner-cutout/banner-cutout.component';
+import { SnackbarComponent } from './component/snackbar/snackbar.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +70,9 @@ import { RibbonComponent } from './component/ribbon/ribbon.component';
     SortTableComponent,
     ReactiveFormComponent,
     RibbonComponent,
+    ButtonToggleComponent,
+    BannerCutoutComponent,
+    SnackbarComponent,
   ],
   imports: [
     BrowserModule,
