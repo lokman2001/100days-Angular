@@ -54,6 +54,7 @@ import { ScaleDirective } from './directive/scale.directive';
 import { CopyDirective } from './directive/copy.directive';
 import { RichTextPipe } from './pipes/rich-text.pipe';
 import { SortPipe } from './pipes/sort.pipe';
+import { CreditCardComponentComponent } from './component/credit-card-component/credit-card-component.component';
 
 @NgModule({
   declarations: [
@@ -106,6 +107,7 @@ import { SortPipe } from './pipes/sort.pipe';
     CopyDirective,
     RichTextPipe,
     SortPipe,
+    CreditCardComponentComponent,
   ],
   imports: [
     BrowserModule,

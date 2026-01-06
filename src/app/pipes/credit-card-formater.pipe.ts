@@ -4,20 +4,23 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'creditCardFormater',
 })
 export class CreditCardFormaterPipe implements PipeTransform {
-  transform(cardNumber: string): string {
+  transform(cardNumber: string, onlyShowLast4Digit = false): string {
     if (!cardNumber) {
       return '';
     }
-
-    if (!this.hasCorrectLength(cardNumber)) {
-      return 'invalid card number.';
-    }
-
     if (!this.isAllNumber(cardNumber)) {
       return 'invalid characters.';
     }
-
-    return this.formatCardNumber(cardNumber);
+    if (!this.hasCorrectLength(cardNumber)) {
+      return 'invalid card number.';
+    }
+    let result: string;
+    if (onlyShowLast4Digit) {
+      result = this.onlyShow4Digit(cardNumber);
+    } else {
+      result = this.formatCardNumber(cardNumber);
+    }
+    return result;
   }
 
   private isAllNumber(cardNumber: string): boolean {
@@ -29,27 +32,17 @@ export class CreditCardFormaterPipe implements PipeTransform {
   }
 
   private formatCardNumber(cardNumber: string): string {
-    return cardNumber.match(/.{1,4}/g)!.join('-');
+    return cardNumber.match(/[\s\S]{1,4}/g)!.join('-');
+  }
+
+  private onlyShow4Digit(cardNumber: string): string {
+    const parts = cardNumber.match(/[\s\S]{1,4}/g) || [];
+    const onlyShowLast4Digit = parts.map((part, index) => {
+      if (index === parts.length - 1) {
+        return part;
+      }
+      return 'xxxx';
+    });
+    return onlyShowLast4Digit.join('-');
   }
 }
-
-// private isAllNumber(cardNumber: string): boolean {
-//   const stringNumber = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-//   const totalValidNumber = cardNumber
-//     .split('')
-//     .filter((char) => stringNumber.includes(char)).length;
-//   return totalValidNumber === cardNumber.length;
-// }
-// private hasCorrectLength(cardNumber: string): boolean {
-//   const standardCreditCardLength = 16;
-//   if (cardNumber.length === standardCreditCardLength) {
-//     return true;
-//   }
-//   return false;
-// }
-// private formatCardNumber(cardNumber: string): string {
-//   return cardNumber
-//     .replace(/\s+/g, '')
-//     .match(/.{1,4}/g)!
-//     .join('-');
-// }

@@ -1,0 +1,13 @@
+<div class="cc-container">
+    <div class="cc-input">
+        <label for="">Credit Card Number</label>
+        <div class="input-wrapper">
+            <input type="text" [(ngModel)]="cardNumber" [placeholder]="placeHolder" maxlength="16">
+            <fa-icon [icon]="icon"></fa-icon>
+        </div>
+    </div>
+    <div class="cc-formatter">
+
+        <small>{{ cardNumber | creditCardFormater : true}} <fa-icon [icon]="mark" *ngIf=""></fa-icon></small>
+    </div>
+</div>
