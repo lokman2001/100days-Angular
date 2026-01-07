@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'pipes', component: PipesPageComponent },
   { path: 'directives', component: DirectivesPageComponent },
   { path: 'services', component: ServicesPageComponent },
+  { path: 'services/:id', component: ServicesPageComponent },
   {
     path: 'other',
     component: OtherPageComponent,

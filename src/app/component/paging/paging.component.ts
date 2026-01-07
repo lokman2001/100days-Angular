@@ -17,8 +17,8 @@ export class PagingComponent {
   @Input() public step = 1;
   @Output() public changePageEvent = new EventEmitter<number>();
 
-  public dialbleNext: boolean = false;
-  public dialblePrev: boolean = false;
+  public dialbleNext: boolean = true;
+  public dialblePrev: boolean = true;
 
   public totalPage(): number {
     return Math.ceil((this.totalItems || 1) / (this.pageSize || 1));
@@ -35,7 +35,7 @@ export class PagingComponent {
     let Pages: number[] = [];
     this.dialbleNext = false;
     this.dialblePrev = false;
-    if (this.currentPage < 1) {
+    if (this.currentPage <= 1) {
       this.currentPage = 1;
     }
     if (this.currentPage > 2) {
@@ -69,4 +69,5 @@ export class PagingComponent {
   public gotoPrev() {
     this.goto(this.currentPage - this.step);
   }
+
 }

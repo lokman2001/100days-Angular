@@ -1,5 +1,5 @@
 import { UserDataService } from 'src/app/service/user-data.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-sort-table',

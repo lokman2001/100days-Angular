@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { UserData } from '../interface/user-data';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -13,4 +14,6 @@ export class UserDataService {
   public get getData(): UserData[] {
     return this.userData;
   }
+
+
 }

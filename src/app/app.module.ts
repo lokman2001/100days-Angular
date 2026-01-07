@@ -55,7 +55,8 @@ import { CopyDirective } from './directive/copy.directive';
 import { RichTextPipe } from './pipes/rich-text.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { CreditCardComponentComponent } from './component/credit-card-component/credit-card-component.component';
-
+import { SortByKeyPipe } from './pipes/sort-by-key.pipe';
+import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -117,10 +118,12 @@ import { CreditCardComponentComponent } from './component/credit-card-component/
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [
     { provide: 'Navigator', useValue: navigator },
     { provide: 'Document', useValue: document },
+    {provide: 'LocalStorage' , useValue: window.localStorage },
   ],
   bootstrap: [AppComponent],
 })

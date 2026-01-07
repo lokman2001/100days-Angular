@@ -67,7 +67,7 @@
     <app-search-list [items]="countries"></app-search-list>
   </div>
 </app-card>
-<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Search List" subtitle="Component">
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Counter" subtitle="Component">
   <div body>
     <app-counter></app-counter>
   </div>
@@ -77,13 +77,13 @@
     <app-table [data]="data"></app-table>
   </div>
 </app-card>
-<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Table" subtitle="Component">
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Paging" subtitle="Component">
   <div body>
     <app-paging [currentPage]="currentPagingPage" [totalItems]="totalItems"
       (changePageEvent)="changePagingPage($event)"></app-paging>
   </div>
 </app-card>
-<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Table" subtitle="Component">
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Tab" subtitle="Component">
   <div body>
     <app-tab [tabs]="tabs" (changeTab)="changeTab($event)"></app-tab>
     <app-paging [currentPage]="currentPagingPage" [totalItems]="totalItems" (changePageEvent)="changePagingPage($event)"
@@ -131,20 +131,20 @@
   </div>
 </app-card>
 
-<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Button Toggle" subtitle="Component">
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Snackbar" subtitle="Component">
   <div body>
     <app-snackbar #snackbar></app-snackbar>
     <button class="btn" (click)="showSnackbar()">Show Snackbar</button>
   </div>
 </app-card>
 
-<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Button Toggle" subtitle="Component">
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Countdown Timer" subtitle="Component">
   <div body>
     <app-countdown-timer [countdown]="countdownDays"></app-countdown-timer>
   </div>
 </app-card>
 
-<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Button Toggle" subtitle="Component">
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Popup" subtitle="Component">
   <div body>
     <app-popup message="Popup">
       <h2>Simple Popup</h2>
@@ -152,13 +152,13 @@
   </div>
 </app-card>
 
-<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Button Toggle" subtitle="Component">
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Footer" subtitle="Component">
   <div body>
     <app-footer></app-footer>
   </div>
 </app-card>
 
-<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Button Toggle" subtitle="Component">
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Skeleton Loader" subtitle="Component">
   <div body>
     <app-skeleton-loader *ngIf="!isloaded"></app-skeleton-loader>
     <p *ngIf="isloaded">
@@ -170,7 +170,7 @@
     <button class="btn" (click)="isloaded = !isloaded">toggle</button>
   </div>
 </app-card>
-<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Button Toggle" subtitle="Component">
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Bottom Sheet" subtitle="Component">
   <div body>
     <app-botton-sheet #bottomSheet><button class="btn" (click)="openBottomSheet()">
         toggle
@@ -178,7 +178,7 @@
   </div>
 </app-card>
 
-<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Button Toggle" subtitle="Component">
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Fieldset Toggle" subtitle="Component">
   <div body>
     <app-fieldset-toggle title="Fieldset toggle" [isOpen]="false">
       <app-reactive-form></app-reactive-form>
@@ -186,7 +186,7 @@
   </div>
 </app-card>
 
-<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Button Toggle" subtitle="Component">
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Pill" subtitle="Component">
   <div body>
     <app-pill label="Info Pill" [type]="pillType.info" [icon]="tagIcon"></app-pill>
     <app-pill label="Success Pill" [type]="pillType.success" [icon]="tagIcon"></app-pill>
@@ -195,7 +195,7 @@
   </div>
 </app-card>
 
-<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Button Toggle" subtitle="Component">
+<app-card [iconEnable]="cardIconEnable" [icon]="faInfo" title="Filter Pill" subtitle="Component">
   <div body>
     <app-pill-filter [pills]="['CA' , 'NA' , 'SW' , 'UV']"></app-pill-filter>
   </div>

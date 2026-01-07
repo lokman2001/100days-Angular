@@ -23,10 +23,6 @@ export class CreditCardComponentComponent {
   @Input() public placeHolder = 'Enter Your Credit-Card-Number';
 
   ngOnInit() {
-    if (this.cardNumber.length === 16) {
-      this.check = true;
-    } else {
-      this.check = false;
-    }
+
   }
 }
